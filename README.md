@@ -33,6 +33,7 @@ Data Collection: PRAW, from reddit
 We built everything from scratch, even data collection :)
 
 ## What we learned
+It is really difficult to derive meaningful result in NLP from comments and online community since many use slangs and incorrect wordings.
 
 ## What's next for DebunkVax
 1. Continue building analysis in different online communities to inform public and derive insights
