@@ -14,7 +14,7 @@ Our goals are to educate people about vaccines and collect data about people's f
 
 ## What it does
 
-The web-application allows users to take the survey. The questions are derived from the most pressing concerns from the online community. Based on the users' answer, we provide truth from the reliable sources such as CDC, WHO, etc. We record individual responses in the database to provide policy makers/ healthcare providers more insights into where people's concerns are coming from.
+The web-application allows users to take the survey. The questions are derived from the most pressing concerns from the online community. Based on the users' answers, we provide truth from reliable sources such as CDC, WHO, etc. We record individual responses in the database to provide policymakers/ healthcare providers more insights into where people's concerns are coming from.
 
 ## How we built it
 
@@ -22,7 +22,7 @@ Web Application: Django & sqlite3
 
 ML Algorithms: Sentiment Analysis - TextBlob, Topic Modeling - gensim LDA
 
-Data Collection: PRAW, from reddit
+Data Collection: PRAW, from Reddit
 
 ## Challenges we ran into
 1. SpiCy got updated and did not support the old TextBlob sentiment analysis measure
@@ -33,10 +33,10 @@ Data Collection: PRAW, from reddit
 We built everything from scratch, even data collection :)
 
 ## What we learned
-It is really difficult to derive meaningful result in NLP from comments and online community since many use slangs and incorrect wordings.
+It is really difficult to derive meaningful results in NLP from comments and the online community since many use slang and incorrect wordings.
 
 ## What's next for DebunkVax
-1. Continue building analysis in different online communities to inform public and derive insights
+1. Continue building analysis in different online communities to inform the public and derive insights
 
 2. We want to scrape data from various pharmacies and let people know of the availability without having to go into each pharmacy website. 
 
