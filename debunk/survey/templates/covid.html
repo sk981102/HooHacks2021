@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DebunkVax | All your Vaccine Information</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="header-wrapper2">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="{% url 'home' %}">DebunkVax</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="{% url 'home' %}" accesskey="1" title="">Home</a></li>
+				<li><a href="{% url 'survey1' %}" accesskey="2" title="">Get Started</a></li>
+				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Topic Modeling</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="three-column" class="container">
+		<div class="title">
+			<h2>Please Select Your Concerns for Covid-19 Vaccines</h2>
+			<span class="byline">These are the main concerns addressed by the online community. Want to know how we got this?</span>
+			<a href="{% url 'analysis' %}">Click Here!</a>
+		</div>
+
+        <div class="title2">
+			<form action=" {% url 'covid' %}" method="post">
+				{% csrf_token %}
+				Taking Johnson & Johnson Conerns Me {{form.vaccine_type}}<br>
+				Pain for the Second Shot {{form.second_shot}} <br>
+				Side Effect {{form.side_effect }} <br>
+				Can my children take it? {{form.children}} <br>
+				<br>
+				Other Concerns? Please Let Us Know!<br> {{form.others}} <br>
+				<br>
+
+			<input class="button-alt" type="submit" value="Submit">
+			</form>
+		  </div>
+
+	</div>
+</div>
+
+
+
+<div id="copyright" class="container">
+	<p>&copy; Shaun Kim. All rights reserved.| Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
