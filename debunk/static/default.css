@@ -528,3 +528,29 @@
 		color: rgba(0,0,0,.5);
 	}
 
+	#two-column
+	{
+		text-align: center;
+		color: rgba(0,0,0,0.6);
+	}
+
+	#two-column .fa
+	{
+		display: block;
+		padding: 1em 0em;
+		color: rgba(0,0,0,1);
+		font-size: 2em;
+	}
+
+	#two-column .title h2
+	{
+		font-weight: bold;
+		color: rgba(0,0,0,0.8);
+	}
+
+	#two-column .title .byline
+	{
+		text-align: center;
+		color: rgba(0,0,0,.5);
+	}
+
