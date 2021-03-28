@@ -42,4 +42,3 @@ We built everything from scratch, even data collection :)
 3. Collect more detailed data to build a robust database to help healthcare workers and policymakers what concerns the public the most. 
 
 4. Censor languages better! 
-5. 
