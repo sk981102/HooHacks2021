@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DebunkVax | All your Vaccine Information</title>
+    <title>DebunkVax | All Your Vaccine Information</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
@@ -21,17 +21,97 @@
 			<ul>
 				<li class="active"><a href="{% url 'home' %}" accesskey="1" title="">Home</a></li>
 				<li><a href="{% url 'survey1' %}" accesskey="2" title="">Get Started</a></li>
-				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Topic Modeling</a></li>
+				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Analysis</a></li>
 			</ul>
 		</div>
+		<div id="banner" class="container">
+		<div class="title">
+			<h2>You told us you have questions about...</h2>
+		</div>
+	</div>
 	</div>
 </div>
 
 <div id="wrapper">
 	<div id="three-column" class="container">
+
+		{% if form.vaccine_type %}
+		<div class="title">
+			<h2>Does it matter which Covid-19 Vaccine we take?</h2>
+			<br>
+			<span class="byline">
+				The health care providers have mentioned that "No, any vaccine is good vaccine."<br><br>
+				Some may be concerned that Johnson and Johnson Covid-19 vaccine has lower effective rate thus ineffective.
+				However, those clinical trials were done during different time period; Johnson and Johnson has conducted its
+				trial in different countries as opposed to Moderna and Pfizer, which conducted their studies only in the U.S.
+				<br><br>
+				Among all three vaccine manufacturers, they all reported that no patients who got Covid-19 after the vaccination
+				were in severe conditions. Thus, all of them are working.
+			</span>
+		</div>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/K3odScka55A" title="YouTube video player"
+				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		<br>
+		{% endif %}
+
+		{% if form.second_shot %}
+		<div class="title">
+			<h2>Why does second shot might cause greater side effects?</h2>
+			<br>
+			<span class="byline">
+				In fact, more people report that they feel ill after getting their second dose.
+				The common side effects include such as fever, fatigue, headache, and soreness at the injection site on their arm.
+				However, this is a good sign that your body's immune system is fighting the new strand of virus.
+				Also, most side effects go away within 72 hours and maximum 7 days. So do not worry!
+			</span>
+		</div>
+
+		{% endif %}
+
+		{% if form.side_effect %}
+		<div class="title">
+			<h2>What are the major side effects of Covid-19 vaccine?</h2>
+			<br>
+			<span class="byline">
+
+				In the arm where you got the shot, the common side effects include: Pain, Redness, Swelling.
+			</span><br>
+			<span class="byline">
+				Throughout the rest of your body,the common side effects include: Tiredness, Headache, Muscle pain, Chills, Fever,Nausea.
+			</span><br>
+		</div>
+		{% endif %}
+
+		{% if form.children %}
+		<div class="title">
+			<h2>Can my children take the Covid-19 Vaccine?</h2>
+			<br>
+			<span class="byline">There has not been enough clinical trial conducted by the vaccine manufacturers to determine its effect.
+				However, Moderna and Pfizer are in the process of their clinical trial on younger teenagers. We will have more updates coming soon.
+			</span>
+
+		</div>
+		{% endif %}
+
+		<div class="title2">
+			Sources: CDC
+		</div>
+
+
 	</div>
 </div>
 
+<div id="header-wrapper">
+	<div id="header2" class="container">
+		<div class="title">
+			<h2>Let's get you vaccinated!</h2>
+		</div>
+		<ul class="actions">
+			<li><a href="https://www.cdc.gov/vaccines/covid-19/reporting/vaccinefinder/about.html" class="button">Book Your Covid-19 Vaccine</a></li>
+		</ul>
+	</div>
+</div>
 
 
 <div id="copyright" class="container">

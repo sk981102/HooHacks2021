@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DebunkVax | All Your Vaccine Information</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="header-wrapper2">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="{% url 'home' %}">DebunkVax</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="{% url 'home' %}" accesskey="1" title="">Home</a></li>
+				<li><a href="{% url 'survey1' %}" accesskey="2" title="">Get Started</a></li>
+				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Analysis</a></li>
+			</ul>
+		</div>
+		<div id="banner" class="container">
+		<div class="title">
+			<h2>You told us you have questions about...</h2>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="three-column" class="container"_>
+
+		{% if form.autism %}
+		<div class="title">
+			<h2>Does vaccination cause autism?</h2>
+			<br>
+			<span class="byline">
+				The widespread fear that vaccines increase risk of autism originated with a 1997 study published by Andrew Wakefield, a British surgeon. The article was published in The Lancet, a prestigious medical journal, suggesting that the measles, mumps, rubella (MMR) vaccine was increasing autism in British children.
+
+The paper has since been completely discredited due to serious procedural errors, undisclosed financial conflicts of interest, and ethical violations. Andrew Wakefield lost his medical license and the paper was retracted from The Lancet.
+
+Nonetheless, the hypothesis was taken seriously, and several other major studies were conducted. None of them found a link between any vaccine and the likelihood of developing autism.
+			</span>
+		</div>
+
+		<br>
+		{% endif %}
+
+		{% if form.cancer %}
+		<div class="title">
+			<h2>Is vaccination related to cancer? Can it cause/accelerate tumor?</h2>
+			<br>
+			<span class="byline">
+				None of the vaccines on the market interact with or alter your DNA in any way or with cancer cells.
+                Thus, they cannot cause cancer.
+			</span>
+		</div>
+
+		{% endif %}
+
+		{% if form.choice %}
+		<div class="title">
+			<h2>Why is vaccination even necessary?</h2>
+			<br>
+			<span class="byline">
+				"Every year, tens of thousands of Americans get sick from diseases that could be prevented by vaccines –
+				some people are hospitalized, some even die. Immunization is our best protection against these diseases.
+				Vaccines are recommended for children, teens, and adults based on different factors like age, health conditions,
+				lifestyle, jobs, and travel. CDC and other medical experts update vaccine recommendations every year based on
+				the latest research and science. Vaccination is a critical step in protecting those that are most vulnerable
+				to illness – infants and young children, the elderly, and those with chronic conditions and weakened immune systems."
+
+				CDC
+
+			</span><br>
+		</div>
+		{% endif %}
+
+		{% if form.gov %}
+		<div class="title">
+			<h2>Why should I get vaccinated if I do not trust the government?</h2>
+			<br>
+			<span class="byline">
+				It is our best interest as a member of the community to get vaccinated! Regardless of your belief in the government.
+			</span>
+
+		</div>
+		{% endif %}
+
+		<div class="title2">
+			Sources: CDC
+		</div>
+
+
+	</div>
+</div>
+
+<div id="header-wrapper">
+	<div id="header2" class="container">
+		<div class="title">
+			<h2>Learm More About Vaccinations!</h2>
+		</div>
+		<ul class="actions">
+			<li><a href="https://www.cdc.gov/vaccines/index.html" class="button">Learn More</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="copyright" class="container">
+	<p>&copy; Shaun Kim. All rights reserved.| Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>

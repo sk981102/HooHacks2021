@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DebunkVax | All your Vaccine Information</title>
+    <title>DebunkVax | All Your Vaccine Information</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
@@ -21,7 +21,7 @@
 			<ul>
 				<li class="active"><a href="{% url 'home' %}" accesskey="1" title="">Home</a></li>
 				<li><a href="{% url 'survey1' %}" accesskey="2" title="">Get Started</a></li>
-				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Topic Modeling</a></li>
+				<li><a href="{% url 'analysis' %}" accesskey="3" title="">Analysis</a></li>
 			</ul>
 		</div>
 	</div>
@@ -30,7 +30,7 @@
 <div id="wrapper">
 	<div id="three-column" class="container">
 		<div class="title">
-			<h2>Please Select Your Concerns for Covid-19 Vaccines</h2>
+			<h2>Please Select Your Concerns About the Covid-19 Vaccine</h2>
 			<span class="byline">These are the main concerns addressed by the online community. Want to know how we got this?</span>
 			<a href="{% url 'analysis' %}">Click Here!</a>
 		</div>
@@ -38,10 +38,14 @@
         <div class="title2">
 			<form action=" {% url 'covid' %}" method="post">
 				{% csrf_token %}
-				Taking Johnson & Johnson Conerns Me {{form.vaccine_type}}<br>
-				Pain for the Second Shot {{form.second_shot}} <br>
-				Side Effect {{form.side_effect }} <br>
-				Can my children take it? {{form.children}} <br>
+				Taking "less effective" vaccine concerns Me {{form.vaccine_type}}<br>
+				<br>
+				I heard the second-dose is more painful {{form.second_shot}} <br>
+				<br>
+				I am concerned about the potential side-effect{{form.side_effect }} <br>
+				<br>
+				Is it ok for my children to take it? {{form.children}} <br>
+				<br>
 				<br>
 				Other Concerns? Please Let Us Know!<br> {{form.others}} <br>
 				<br>

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DebunkVax | All your Vaccine Information</title>
+    <title>DebunkVax | All Your Vaccine Information</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
@@ -30,7 +30,7 @@
 <div id="wrapper">
 	<div id="three-column" class="container">
 		<div class="title">
-			<h2>Please Select Your Concerns for Covid-19 Vaccines</h2>
+			<h2>Please Select Your Concerns About Vaccines In General</h2>
 			<span class="byline">These are the main concerns addressed by the online community. Want to know how we got this?</span>
 			<a href="{% url 'analysis' %}">Click Here!</a>
 		</div>
@@ -38,11 +38,12 @@
         <div class="title2">
 			<form action=" {% url 'other' %}" method="post">
 				{% csrf_token %}
-				Do you fear that the vaccination may cause autism?{{form.autism}}<br>
-				Do you feel that vaccine is a choice? {{form.choice}} <br>
-				Do you fundamentally not trust the government? {{form.gov}} <br>
-				<br>
-				Other Concerns? Please Let Us Know!<br> {{form.others}} <br>
+				Do you fear that the vaccination may cause autism?{{form.autism}}<br><br>
+				Do you fear that the vaccination might accelerate cancer? {{form.cancer}} <br><br>
+				Do you feel that vaccine is a choice? {{form.choice}} <br><br>
+				Do you fundamentally not trust the government? {{form.gov}} <br><br>
+				<br><br>
+				Other Concerns? Please Let Us Know!<br> {{form.others}} <br><br>
 				<br>
 
 			<input class="button-alt" type="submit" value="Submit">

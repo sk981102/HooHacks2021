@@ -34,9 +34,9 @@ def other_view(request, *args, **kwargs):
             choice = form.cleaned_data['choice']
             gov = form.cleaned_data['gov']
             others = form.cleaned_data["others"]
-            requested = SurveyCovid.objects.create(autism=autism,cancer=cancer,choice=choice,gov=gov,others=others)
+            requested = SurveyOther.objects.create(autism=autism,cancer=cancer,choice=choice,gov=gov,others=others)
             requested.save()
-            return render(request, "facts.html", {"form": form.cleaned_data, })
+            return render(request, "facts2.html", {"form": form.cleaned_data, })
     else:
         form = RequestFormOther(request.POST)
     return render(request, "other.html",{"form": form, })
